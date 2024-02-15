@@ -147,12 +147,14 @@
                                         <input type="text" class="form-control" id="editLastName" name="editLastName" placeholder="Pan" required>
                                       </div>
                                       <div class="mb-3">
-                                        <label for="editAge" class="form-label">Firstname</label>
+                                        <label for="editAge" class="form-label">Age</label>
                                         <input type="text" class="form-control" id="editAge" name="editAge" placeholder="18" required>
                                       </div>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="submit" class="btn btn-primary">Edit</button>
+                                      <input type="hidden" name="editBtn" value="ok">
+                                      <input type="hidden" name="editStudentId" value="<?= $row['id'] ?>">
                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     </div>
                                   </form>

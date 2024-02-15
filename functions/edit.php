@@ -5,11 +5,12 @@
     $editFirstName = $_POST['editFirstName'];
     $editLastName = $_POST['editLastName'];
     $editAge = $_POST['editAge'];
+    $editStudentId = $_POST['editStudentId'];
 
-    $sql = "INSERT INTO students (firstName, lastName, age) VALUES (?, ?, ?)";
+    $sql = "UPDATE students SET firstName=?, lastName=?, age=? WHERE id=?";
     $stmt = $conn->prepare($sql);
 
-    $stmt->bind_param("ssi", $firstName, $lastName, $age);
+    $stmt->bind_param("ssii", $editFirstName, $editLastName, $editAge, $editStudentId);
     $stmt->execute();
 
     $stmt->close();
