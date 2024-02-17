@@ -67,8 +67,8 @@
                   while ($row = $result->fetch_assoc()): ?>
                       <tr>
                           <td><?= $rowNumber ?></td>
-                          <td><?= $row['firstName'] ?></td>
-                          <td><?= $row['lastName'] ?></td>
+                          <td><?= ucwords(strtolower($row['firstName'])) ?></td>
+                          <td><?= ucwords(strtolower($row['lastName'])) ?></td>
                           <td><?= $row['age'] ?></td>
                           <td class="d-flex flex-row gap-3">
 
@@ -108,10 +108,10 @@
                                   </div>
                                   <div class="modal-body">
                                     <div class="mb-3">
-                                      <h2>Firstname: <?= $row['firstName'] ?></h2>
+                                      <h2>Firstname: <?= ucwords(strtolower($row['firstName'])) ?></h2>
                                     </div>
                                     <div class="mb-3">
-                                      <h2>Lastname: <?= $row['lastName'] ?></h2>
+                                      <h2>Lastname: <?= ucwords(strtolower($row['lastName'])) ?></h2>
                                     </div>
                                     <div class="mb-3">
                                       <h2>Age: <?= $row['age'] ?></h2>
